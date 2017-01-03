@@ -1,0 +1,92 @@
+html , body {
+    padding : 0;
+    margin : 0;
+    height : 100%;
+    font-family: Roboto, 'Open Sans' , sans-serif;
+     background: rgba(92,129,202,0.2);  
+}
+
+@theme-color : rgb(0, 188, 212);
+
+.center {
+    text-align : center
+}
+
+//Modal styles
+.modal-content{
+    height : 500px;
+    overflow:hidden;
+}
+.container {
+    width: 100%;
+    font-size: 16px;
+
+    .btn-toolbar > .btn-group {
+        margin-left: 40px;
+    }
+    
+    .react-bs-table {
+        background-color: lightgray
+    }
+    .react-bs-table-pagination {
+        span.dropdown {
+            float: left;
+        }
+    }
+    .actions  {
+        >div button div div {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        >div button[disabled] div {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+         div + div{
+            margin-left: 10px;
+        }
+    }
+    .search-container {
+        @adjust-left : 30px;
+
+        div + div {
+            margin-left: @adjust-left;
+        }
+        >div label {
+            margin-left: @adjust-left;
+        }
+        div {
+            width: 150px !important;
+        }
+        #status , #subject , #region, #scope{
+            position: absolute !important;
+
+            svg {
+                right: -@adjust-left !important;
+            }
+        }
+        .date-pickers {
+             display: inline;
+             margin-left: @adjust-left;
+             >div {
+                 display: inline-block;
+             }
+         }
+         .query-clear {
+             display: inline;
+             margin-left: @adjust-left;
+             >div{
+                 margin-top: 24px;
+             }
+         }
+       
+    }
+    .pagination {
+        
+        > .active > a{
+            background-color :@theme-color;
+            border-color: @theme-color
+        }
+
+    }
+}
